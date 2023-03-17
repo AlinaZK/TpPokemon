@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block body %}
+
+
+    {% for pokemon in pokemons %}
+<article>
+                    <img src="{{asset('img/pokemons/'~pokemons.image)}}" alt="image">
+                    <h2>{{pokemons.description}}</h2>
+
+</article>
+    {% endfor %}
+
+
+{% endblock %}

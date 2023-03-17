@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MainController!{% endblock %}
+
+{% block body %}
+    <ul>
+        <img src="{{ asset('img/icon/pokemon_logo.svg.png') }}" alt="Image">
+    <a href="{{ path('pokemons_list') }}">Attraper les tous</a>
+    </ul>
+{% endblock %}

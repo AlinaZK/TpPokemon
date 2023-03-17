@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<section class ="series-list">
+
+        {% for pokemon in pokemons %}
+ <article>
+        <a href = "{{path('pokemons_details', {'id': pokemon.id}) }}">
+            <img src= "{{asset('img/pokemons/'~pokemon.image)}}"><h2>{{pokemon.nom}}</h2>
+
+        </a>
+ </article>
+
+    {% endfor %}
+</section>
+
+{% endblock %}
+
+{% block title %}
+    All Pokemons | {{ parent() }}
+{% endblock %}
